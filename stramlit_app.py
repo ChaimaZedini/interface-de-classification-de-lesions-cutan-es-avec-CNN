@@ -36,12 +36,9 @@ model = load_cnn_model()
 class_names = load_class_names()
 
 # Section upload - TOUJOURS afficher cette partie
-st.header("Uploader une image")
+#st.header("Uploader une image")
 uploaded_file = st.file_uploader(
-    "Choisissez une image...", 
-    type=['jpg', 'jpeg', 'png'],
-    help="Formats supportés: JPG, JPEG, PNG"
-)
+    "Choisissez une image...") #type=['jpg', 'jpeg', 'png'],help="Formats supportés: JPG, JPEG, PNG")
 
 if uploaded_file is not None:
     # Afficher l'image
