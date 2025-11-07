@@ -14,10 +14,10 @@ st.title("Classification d'Images")
 def load_cnn_model():
     try:
         model = load_model('modele_cnn.h5')
-        st.success("✅ Modèle chargé avec succès!")
+        st.success(" Modèle chargé avec succès!")
         return model
     except Exception as e:
-        st.error(f"❌ Erreur chargement modèle: {e}")
+        #st.error(f"❌ Erreur chargement modèle: {e}")
         return None
 
 @st.cache_resource
@@ -25,10 +25,10 @@ def load_class_names():
     try:
         with open('classes.pkl', 'rb') as f:
             class_names = pickle.load(f)
-        st.success("✅ Classes chargées avec succès!")
+        st.success(" Classes chargées avec succès!")
         return class_names
     except Exception as e:
-        st.error(f"❌ Erreur chargement classes: {e}")
+        #st.error(f"❌ Erreur chargement classes: {e}")
         return None
 
 # Chargement
